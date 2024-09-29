@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything Her</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div id="mainContainer" class="container">
+        <h1 class="title">Everything Her</h1>
+        <p>Empower your journey with confidence and style!</p>
+        <button id="setupButton">Set Up Your Profile</button>
+        <div id="alertMessage" class="hidden"></div>
+        <button id="safetyButton">Safety Mode (Always ON)</button>
+        <div id="status">Safety mode is ON.</div>
+    </div>
+
+    <div id="setupContainer" class="setup-container hidden">
+        <h2>Profile Setup</h2>
+        <form id="setupForm">
+            <label for="routine">Daily Routine:</label>
+            <input type="text" id="routine" required placeholder="e.g., school, work">
+
+            <label for="transport">Transportation:</label>
+            <input type="text" id="transport" required placeholder="e.g., bus, subway">
+
+            <label for="safetyWords">Safety Words:</label>
+            <input type="text" id="safetyWords" required placeholder="comma-separated">
+
+            <label for="emergencyContacts">Emergency Contacts:</label>
+            <input type="text" id="emergencyContacts" required placeholder="comma-separated">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="diary-container hidden">
+        <h2>Your Diary</h2>
+        <label for="entryCategory">Select Category:</label>
+        <select id="entryCategory">
+            <option value="personalReflection">Personal Reflection</option>
+            <option value="dailyNotes">Daily Notes</option>
+            <option value="thoughtsAndFeelings">Thoughts and Feelings</option>
+        </select>
+        <label for="entryLocation">Location:</label>
+        <input type="text" id="entryLocation" placeholder="Enter location (optional)">
+        <label for="entryContent">Diary Entry:</label>
+        <textarea id="entryContent" rows="5" placeholder="Write your entry here..."></textarea>
+        <button id="alertButton">Quick Alert</button>
+        <button id="saveEntryButton">Add Today's Entry</button>
+        <button id="showEntriesButton">Show Previous Entries</button>
+        <div id="previousEntries" class="hidden"></div>
+    </div>
+
+    <div class="tabs hidden" id="tabs">
+        <button class="tab-button" id="diaryTab">Diary</button>
+        <button class="tab-button" id="musicTab">Music</button>
+        <button class="tab-button" id="mapTab">Map</button>
+    </div>  
+
+    <div class="music-container hidden" id="musicContainer">
+        <h2>Your Music</h2>
+        <div id="albumCovers"></div>
+    </div>
+
+    <div class="map-container hidden" id="mapContainer">
+        <h2>Your Map</h2>
+        <div id="map" style="height: 400px;"></div>
+        <button id="startTrackingButton">Start Live Tracking</button>
+        <label for="manualLocation">Enter Location:</label>
+        <input type="text" id="manualLocation">
+        <button id="submitLocationButton">Submit Location</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+</body>
+</html>

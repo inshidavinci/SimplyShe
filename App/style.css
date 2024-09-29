@@ -1,0 +1,103 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffb3d1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container, .setup-container, .diary-container, .map-container, .music-container {
+    width: 90%; /* Make the width larger */
+    max-width: 800px; /* Set a max width to prevent it from getting too wide */
+    margin: 0 auto; /* Center the container */
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff1493;
+}
+
+h2 {
+    color: #ff69b4;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ff69b4;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.hidden {
+    display: none;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Playlist Styles */
+.playlist {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.playlist-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.song-cover {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
