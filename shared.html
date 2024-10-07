@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shared</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            background: #ffb3d1;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .checkmark-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .checkmark {
+            font-size: 100px;
+            color: rgb(142, 1, 128);
+        }
+
+        .star {
+            position: absolute;
+            background: rgb(182, 5, 108);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: move 5s infinite;
+        }
+
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(200px, 200px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="checkmark-container">
+        <div class="checkmark">✔️</div>
+        <h1>Shared Successfully!</h1>
+    </div>
+
+    <script>
+        function createStar() {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 10 + 5;
+            star.style.width = `${size}px`; // Fixed here
+            star.style.height = `${size}px`; // Fixed here
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            document.body.appendChild(star);
+            star.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random duration
+        }
+
+        for (let i = 0; i < 50; i++) {
+            createStar();
+        }
+    </script>
+</body>
+</html>

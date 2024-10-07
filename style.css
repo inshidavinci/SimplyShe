@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #f7c6d2, #ffb3d1); /* Added back the gradient */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+    position: relative;
+}
+
+/* Container Styles */
+.container, .setup-container, .diary-container, .map-container, .music-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 20px; /* More rounded corners */
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title Styles */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ff1493;
+    text-shadow: 1px 1px 2px rgba(255, 20, 147, 0.5);
+}
+
+/* Avatar Styles */
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Round avatar */
+    margin-bottom: 20px;
+    border: 3px solid #ff69b4;
+}
+
+/* Header Styles */
+h2 {
+    color: #ff69b4;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif; /* Nicer font */
+    font-weight: 600;
+}
+
+/* Label Styles */
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input Styles */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ff69b4;
+    border-radius: 20px; /* More rounded corners */
+    font-size: 1rem;
+}
+
+/* Button Styles */
+button {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px; /* More rounded buttons */
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff69b4;
+    transform: scale(1.05);
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Map Styles */
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+/* Previous Entries Styles */
+#previousEntries {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px; /* More rounded corners */
+    width: 100%;
+}
+
+/* Playlist Styles */
+.playlist {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* Song Item Styles */
+.song-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.song-cover {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px; /* Round album cover */
+}
+
+/* Tab Styles */
+.tabs {
+    margin-top: 20px;
+}
+
+.tab-button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px; /* More rounded tabs */
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #ff1493;
+}
